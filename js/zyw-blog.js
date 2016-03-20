@@ -25,10 +25,20 @@
 $(document).ready(function() {
 	$("table").wrap("<div class='table-responsive'></div>");
 	$("table").addClass("table");
+
+	/*return top*/
 	$("body").append("<img src='/img/gotop.png' style='position:fixed; z-index:999; bottom:20px; right:20px; cursor:pointer;' id='goTop'/>");
 	$(document).on("click", "#goTop", function(){
 	    window.scrollTo(0,0);
 	});
+
+    /*catalog*/
+    $("#catalog").next().css({
+        position:'fixed',
+        'z-index':999,
+        right:'20px',
+        top: '20px'
+    });
 });
 
 // responsive embed videos
